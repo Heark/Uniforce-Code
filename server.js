@@ -9,8 +9,9 @@ var io = require("socket.io")(server);
 
 io.on('connection', function(client){
   console.log(client.id + 'has connected!');
-  
+
   client.on('hi', function() {
     alert(client.id + "said hi!");
+    client.emit('hi-too');
   });
 });
