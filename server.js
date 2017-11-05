@@ -11,7 +11,6 @@ io.on('connection', function(client){
   console.log(client.id + 'has connected!');
   
   client.on('hi', function() {
-    return "hi";
-    console.log(client.id + "said hi!");
+    alert(client.id + "said hi!");
   });
 });
