@@ -1,0 +1,14 @@
+{
+  "name": "uniforce",
+  "version": "0.0.1",
+  "description": "RPG Maker Game",
+  "main": "server.js",
+  "repository": "",
+  "author": "Antwaun Tune",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0",
+    "socket.io": "^2.0.4"
+  }
+}
