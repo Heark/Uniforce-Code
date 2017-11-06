@@ -28,5 +28,3 @@ io.on('connection', function(client){
     return connectCounter;
   })
 });
-
-io.on('disconnection', function())
