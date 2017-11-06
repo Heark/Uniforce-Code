@@ -16,7 +16,7 @@ io.on('connection', function(client){
     client.emit('hi-too');
   });
 
-  client.on('new-connection', function(){
+  client.on('new-connection,' function(){
     connectCounter++
   })
 
@@ -25,6 +25,5 @@ io.on('connection', function(client){
   })
 
   client.on('get-players-online', function(){
-   return connectCounter;
+    client.emit('players-online', connectCounter);
   })
-});
