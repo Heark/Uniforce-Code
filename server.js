@@ -25,6 +25,6 @@ io.on('connection', function(client){
   })
 
   client.on('get-players-online', function(){
-    return connectCounter;
+  //  return connectCounter;
   })
 });
