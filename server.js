@@ -12,7 +12,7 @@ io.on('connection', function(client){
 
   client.emit('isconnected');
 
-  client.on('hi', function(socketIO.engine.clientsCount) {
+  client.on('hi', function() {
     client.emit('hi-too');
   });
 
