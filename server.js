@@ -15,14 +15,14 @@ io.on('connection', function(client){
   });
 
   client.on('new-connection', function(){
-    connectCounter++
-  })
+    connectCounter++;
+  });
 
   client.on('lost-connection', function(){
-    connectCounter--
-  })
+    connectCounter--;
+  });
 
   client.on('get-players-online', function(){
     client.emit('players-online', connectCounter);
-  })
-}
+  });
+});
