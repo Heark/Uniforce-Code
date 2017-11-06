@@ -10,13 +10,11 @@ var connectCounter = 0;
 io.on('connection', function(client){
   console.log(client.id + ' has connected!');
 
-  client.emit('isconnected');
-
   client.on('hi', function() {
     client.emit('hi-too');
   });
 
-  client.on('new-connection,' function(){
+  client.on('new-connection', function(){
     connectCounter++
   })
 
