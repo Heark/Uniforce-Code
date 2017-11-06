@@ -6,7 +6,7 @@ var server = app.listen(PORT, function(){
 });
 
 var io = require("socket.io")(server);
-
+var connectCounter = 0;
 io.on('connection', function(client){
   console.log(client.id + ' has connected!');
 
@@ -16,4 +16,17 @@ io.on('connection', function(client){
     client.emit('hi-too');
   });
 
+  client.on('new-connection,' function(){
+    connectCounter++
+  })
+
+  client.on('lost-connection', function(){
+    connectCounter--
+  })
+
+  client.on('get-players-online', function(){
+    return connectCounter;
+  })
 });
+
+io.on('disconnection', function())
