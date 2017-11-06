@@ -22,7 +22,8 @@ io.on('connection', function(client){
     connectCounter--;
   });
 
-  client.on('get-players-online', function(){
-    client.emit('players-online', connectCounter);
+  client.on('get-players-online', function(data){
+    data = connectCounter;
+    client.emit('players-online', data);
   });
 });
