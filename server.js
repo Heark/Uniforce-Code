@@ -25,3 +25,4 @@ io.on('connection', function(client){
   client.on('get-players-online', function(){
     client.emit('players-online', connectCounter);
   })
+}
