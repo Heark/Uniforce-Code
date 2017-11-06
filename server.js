@@ -8,8 +8,12 @@ var server = app.listen(PORT, function(){
 var io = require("socket.io")(server);
 
 io.on('connection', function(client){
-  console.log(client.id + 'has connected!');
-  client.on('hi', function() {
+  console.log(client.id + ' has connected!');
+
+  client.emit('isconnected');
+
+  client.on('hi', function(socketIO.engine.clientsCount) {
     client.emit('hi-too');
   });
+
 });
